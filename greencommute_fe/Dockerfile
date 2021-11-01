@@ -1,5 +1,5 @@
 FROM node:10-alpine as builder
-COPY package.json  ./
+COPY ./greencommute_fe/package.json  ./
 RUN npm install
 RUN npm install react-scripts@3.0.1 -g
 RUN mkdir /app && mv ./node_modules ./app
