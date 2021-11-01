@@ -25,20 +25,20 @@ buildscript {
   dependencies {
     classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.1.1"
   }
-}
+
 sonarqube {
-    properties {
-        property "sonar.projectKey", "BC16-greencommute-be"
-        property "sonar.organization", "zemoso-int"
-        property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.coverage.exclusions", "**/entity/**"
-        property "sonar.coverage.jacoco.xmlReportPaths", "${rootDir}/build/reports/jacoco/codeCoverageReport/codeCoverageReport.xml"
-        property "sonar.coverage.jacoco.htmlReportPath", "${rootDir}/build/reports/jacoco/codeCoverageReport/codeCoverageReport.html"
+  properties {
+    
+    property "sonar.projectKey", "SrivyshnaviK_BC_16GreenCommute"
+    property "sonar.organization", "srivyshnavik"
+    property "sonar.host.url", "https://sonarcloud.io"
+    property "sonar.coverage.exclusions", "**/entity/**"
+    property "sonar.coverage.jacoco.xmlReportPaths", "${rootDir}/build/reports/jacoco/codeCoverageReport/codeCoverageReport.xml"
+    property "sonar.coverage.jacoco.htmlReportPath", "${rootDir}/build/reports/jacoco/codeCoverageReport/codeCoverageReport.html"
 
-    }
+  }
 }
 
-0
 
 subprojects {
     repositories {
