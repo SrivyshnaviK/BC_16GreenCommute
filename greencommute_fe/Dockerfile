@@ -11,7 +11,7 @@ RUN npm run build-dev --silent
 
 
 
-FROM nginx:alpine
+FROM nginx
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /app/dist /usr/share/nginx/html
 RUN rm /etc/nginx/conf.d/default.conf
