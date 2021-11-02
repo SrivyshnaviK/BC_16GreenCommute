@@ -1,6 +1,6 @@
 FROM node:10-alpine as builder
 RUN mkdir /app 
-RUN mv node_modules app
+RUN mv ./node_modules ./app
 WORKDIR /app
 COPY ./greencommute_fe/package.json  ./
 RUN npm install --silent 
