@@ -42,7 +42,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: ./
+          context: ./greencommute_fe
           file: ./greencommute_fe/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/greencommutedocker:latest
