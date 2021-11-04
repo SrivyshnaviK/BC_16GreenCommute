@@ -34,9 +34,11 @@ jobs:
           distribution: 'adopt'
           server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
+      - name: Print PWD
+        run : echo $(pwd) 
 
       - name: Build with Gradle
-        run: gradlew build
+        run: ./gradlew build
       - uses: actions/checkout@v2
         with:
           name: Package
