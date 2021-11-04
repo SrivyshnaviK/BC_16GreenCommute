@@ -36,8 +36,11 @@ jobs:
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: gradlew build
       - uses: actions/checkout@v2
+        with:
+          name: Package
+          path: build/libs
       
       - name: Check Out Repo 
         uses: actions/checkout@v2
