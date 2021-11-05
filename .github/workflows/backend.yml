@@ -64,7 +64,7 @@ jobs:
           context: ./greencommute_be/jobsService
           file: ./greencommute_be/jobsService/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/greencommutedocker:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/greencommutedockerjobservice:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
